@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black">
+
+    <RelativeLayout
+        android:id="@+id/video_player_ly"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="@color/black">
+
+        <com.zqh.videoplayerdemo.views.PhotoVideoView
+            android:id="@+id/video_player_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/video_player_control_ly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:layout_above="@+id/video_player_buttomview"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/video_player_current_dution"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:layout_marginTop="8dp"
+            android:text="00:00"
+            android:layout_below="@+id/video_player_seekbar"
+            android:textColor="@color/c5"/>
+
+        <android.support.v7.widget.AppCompatSeekBar
+            android:id="@+id/video_player_seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/video_player_alldution"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/video_player_seekbar"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:layout_marginTop="8dp"
+            android:text="00:00"
+            android:textColor="@color/c5"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/video_player_buttomview"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ProgressBar
+        android:id="@+id/video_player_loadprogress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/video_player_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:scaleType="center"/>
+
+</RelativeLayout>
