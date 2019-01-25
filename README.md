@@ -1,7 +1,7 @@
 # VideoPlayerDemo
 ## 说明：
  使用VideoView 进行视频的播放，适配横竖屏切换画面拉伸问题。
-#主要代码 横竖屏切换：
+ # 主要代码 横竖屏切换：
 ```java
 public void updataVideoViewWH(Configuration newConfig) {
         int video_w = mVideoView.getVideo_w();
